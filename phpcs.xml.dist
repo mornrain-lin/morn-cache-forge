@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--
+  PHP_CodeSniffer 配置（PSR-12）。
+
+  运行：composer lint:style
+  或：  vendor/bin/phpcs
+-->
+<ruleset name="MornRain\CacheForge">
+    <description>多级缓存封装 · PSR-12 代码风格</description>
+
+    <!-- 只检查本库代码，排除生成物与依赖 -->
+    <file>src</file>
+    <file>tests</file>
+    <file>examples</file>
+
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/build/*</exclude-pattern>
+    <exclude-pattern>*/.git/*</exclude-pattern>
+
+    <arg name="extensions" value="php"/>
+    <arg name="colors"/>
+    <arg value="sp"/>
+
+    <rule ref="PSR12"/>
+
+    <!--
+      与 PSR-12 的差异说明（均为有意偏离）：
+
+      1) 行宽：PSR-12 建议 120，这里放宽到 150。
+         中文注释按字节计长度，120 会让含中文的 docblock 频繁误报。
+      2) 行尾空格在行尾注释里允许存在（表格对齐需要）。
+    -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="150"/>
+            <property name="absoluteLineLimit" value="0"/>
+        </properties>
+    </rule>
+
+    <!--
+      注释里的中文与全角标点不应被当作编码问题；
+      同时要求每个文件都有 strict_types。
+    -->
+    <rule ref="Generic.Files.Encoding">
+        <properties>
+            <property name="encoding" value="UTF-8"/>
+        </properties>
+    </rule>
+</ruleset>

@@ -1,0 +1,38 @@
+# Composer
+/vendor/
+composer.phar
+
+# 测试与覆盖率
+/tests/
+/phpunit.xml
+/phpunit.xml.dist
+/.phpunit.result.cache
+/coverage/
+
+# 本地缓存目录（文件缓存库运行时生成）
+.cache/
+/storage/
+/tmp/
+
+# 依赖锁文件是否提交请自行决定
+# composer.lock
+
+# 编辑器
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.settings/
+.project
+.buildpath
+
+# 系统垃圾文件
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# 日志
+*.log
+/debug.log
+error_log

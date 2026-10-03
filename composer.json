@@ -1,0 +1,63 @@
+{
+    "name": "mornrain/morn-cache-forge",
+    "description": "多级缓存封装：内存 → 对象缓存 → Transient → 文件 → 默认值，附带击穿锁、标签失效、原子写入与命中率统计。零外部依赖，PHP 7.4+。",
+    "type": "library",
+    "keywords": [
+        "wordpress",
+        "cache",
+        "transient",
+        "object-cache",
+        "stampede",
+        "file-cache",
+        "cache-tags",
+        "cache-invalidation",
+        "flock",
+        "psr-16"
+    ],
+    "homepage": "https://github.com/MornRain/morn-cache-forge",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MornRain",
+            "homepage": "https://github.com/MornRain",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/MornRain/morn-cache-forge/issues",
+        "source": "https://github.com/MornRain/morn-cache-forge",
+        "security": "https://github.com/MornRain/morn-cache-forge/security/advisories/new",
+        "docs": "https://github.com/MornRain/morn-cache-forge#readme"
+    },
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "MornRain\\CacheForge\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MornRain\\CacheForge\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "@php tests/run-tests.php",
+        "demo": "@php examples/cache.php",
+        "lint": "@php -l src/CacheForge.php && @php -l src/CacheTags.php && @php -l src/CachedValue.php && @php -l src/Compat.php && @php -l src/FileStore.php && @php -l src/Metrics.php && @php -l src/Serializer.php && @php -l src/StampedeLock.php",
+        "test:phpunit": "phpunit",
+        "lint:style": "phpcs"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0.x-dev"
+        }
+    }
+}
