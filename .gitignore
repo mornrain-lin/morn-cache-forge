@@ -3,9 +3,6 @@
 composer.phar
 
 # 测试与覆盖率
-/tests/
-/phpunit.xml
-/phpunit.xml.dist
 /.phpunit.result.cache
 /coverage/
 
