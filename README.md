@@ -48,7 +48,7 @@
 ## 安装
 
 ```bash
-composer require mornrain/morn-cache-forge
+composer require mornrain-lin/morn-cache-forge
 ```
 
 或手动引入：
@@ -491,7 +491,7 @@ composer lint:style    # PSR-12 代码风格
 
 ## License
 
-MIT License — Copyright (c) 2026 MornRain
+MIT License — Copyright (c) 2026 mornrain-lin
 
 详见 [LICENSE](LICENSE)。
 

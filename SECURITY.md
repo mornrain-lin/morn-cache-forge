@@ -31,7 +31,7 @@
 
 报告内容请包含：
 
-1. 受影响版本（`composer show mornrain/morn-cache-forge` 的输出）；
+1. 受影响版本（`composer show mornrain-lin/morn-cache-forge` 的输出）；
 2. 漏洞类型（注入 / XSS / 路径穿越 / 拒绝服务 / 信息泄露 / 权限绕过等）；
 3. 复现步骤或最小复现代码；
 4. 影响范围与严重程度估计；

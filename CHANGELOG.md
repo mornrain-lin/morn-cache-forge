@@ -84,4 +84,4 @@
 - `Compat`：随机数与进程 ID 垫片
 - `examples/cache.php`：11 个场景的可运行示例
 
-[1.0.0]: https://github.com/MornRain/morn-cache-forge/releases/tag/v1.0.0
+[1.0.0]: https://github.com/mornrain-lin/morn-cache-forge/releases/tag/v1.0.0
